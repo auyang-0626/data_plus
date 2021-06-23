@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'data_plus'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=data_plus",
+                    "--package=data_plus"
+                ],
+                "filter": {
+                    "name": "data_plus",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'data_plus'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=data_plus",
+                    "--package=data_plus"
+                ],
+                "filter": {
+                    "name": "data_plus",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
